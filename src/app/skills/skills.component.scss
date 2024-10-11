@@ -1,0 +1,240 @@
+
+.skills-container {
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  z-index: 2; 
+}
+
+.word-cloud {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px 0;
+  z-index: 3; 
+}
+
+.word {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  position: relative;
+  animation: randomFloat 6s ease-in-out infinite alternate;
+}
+
+
+@keyframes randomFloat {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  20% {
+    transform: translate(15px, -25px) rotate(5deg);
+  }
+  40% {
+    transform: translate(-30px, 20px) rotate(-10deg);
+  }
+  60% {
+    transform: translate(20px, 30px) rotate(8deg);
+  }
+  80% {
+    transform: translate(-25px, -20px) rotate(-7deg);
+  }
+  100% {
+    transform: translate(10px, -15px) rotate(3deg);
+  }
+}
+.word:nth-child(odd) {
+  animation-duration: 7s;
+  animation-delay: 2s;
+}
+
+.word:nth-child(even) {
+  animation-duration: 5s;
+  animation-delay: 1s;
+}
+.skills-card-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.skills-card {
+  width: 200px;
+  height: 250px;
+  perspective: 1000px;
+  z-index: 2;
+  transition: transform 0.6s;
+}
+
+.skills-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.skills-card-inner {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  position: relative;
+  transition: transform 0.6s;
+}
+
+.skills-card:hover .skills-card-inner {
+  transform: rotateY(180deg);
+}
+
+.skills-card-front,
+.skills-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skills-card-front {
+  background: linear-gradient(135deg, #8e44ad, #3498db);
+  color: #fff;
+}
+
+.skills-card-back {
+  background: linear-gradient(135deg, #e74c3c, #f39c12);
+  color: #fff;
+  transform: rotateY(180deg);
+}
+
+
+.tree-diagram-container {
+  padding: 20px;
+  text-align: center;
+  margin-top: 40px;
+  background-color: #f8f8f8; /* Fondo suave para destacar el árbol */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#tree-diagram svg {
+  width: 95%; /* Ajusta el ancho para centrado */
+  height: auto;
+  margin: 0 auto;
+}
+
+#tree-diagram line {
+  stroke: #aaa; /* Color más claro para las líneas */
+  stroke-width: 1.5px;
+}
+
+#tree-diagram circle {
+  fill: #4b0082; /* Color de nodo más destacado */
+  stroke: #fff;
+  stroke-width: 2px;
+}
+
+#tree-diagram text {
+  font-size: 13px;
+  fill: #333;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8); /* Sombra para mayor legibilidad */
+}
+
+/* Estilos para los botones animados */
+.animated-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 30px 0;
+}
+
+.animated-button {
+  background: linear-gradient(45deg, #007bff, #00c6ff);
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.animated-button:hover {
+  transform: translateY(-5px);
+}
+
+
+/* Estilos para las tarjetas con efecto hover */
+.cards-section {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin: 30px 0;
+  flex-wrap: wrap;
+}
+
+.skill-card {
+  background: #e0e0e0;
+  padding: 20px;
+  border-radius: 12px;
+  width: 200px;
+  text-align: center;
+  transition: transform 0.4s, box-shadow 0.4s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.skill-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  background: #007bff;
+  color: #fff;
+}
+
+.form-section {
+  background: linear-gradient(to right, #f0f0f0, #e0e0e0);
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 40px auto;
+  max-width: 400px;
+}
+
+.input-field {
+  width: 80%;
+  margin: 15px 0;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.input-field:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+  outline: none;
+}
+
+.submit-button {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-size: 16px;
+}
+
+.submit-button:hover {
+  background: #0056b3;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+

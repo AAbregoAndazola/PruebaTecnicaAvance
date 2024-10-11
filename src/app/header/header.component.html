@@ -1,0 +1,27 @@
+<mat-toolbar color="primary" class="custom-header">
+  <div class="header-left">
+    <img src="assets/over.png" alt="Logo" class="logo" />
+    <span class="app-name">Prueba técnica avance</span>
+  </div>
+
+  <mat-form-field appearance="outline" class="search-bar">
+    <mat-label>Busque en nuestro catálogo</mat-label>
+    <input matInput type="text" placeholder="Buscar en nuestro catálogo" />
+  </mat-form-field>
+
+  <div class="nav-buttons">
+    <button mat-button routerLink="/" class="nav-item">Home</button>
+    <button mat-button routerLink="/listado" class="nav-item">Lista</button>
+    <button mat-button routerLink="/skills" class="nav-item">Skills</button> 
+  </div>
+
+
+  <div class="user-section">
+    <button mat-icon-button *ngIf="!isLoggedIn" routerLink="/login">
+      <mat-icon>person</mat-icon> 
+    </button>
+    <button mat-icon-button *ngIf="isLoggedIn" (click)="onLogout()">
+      <mat-icon>exit_to_app</mat-icon>
+    </button>
+  </div>
+</mat-toolbar>

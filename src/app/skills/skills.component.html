@@ -1,0 +1,72 @@
+<div class="skills-container">
+  <h2>Conceptos Filosóficos</h2>
+
+  <!-- Nube de palabras -->
+  <div class="word-cloud">
+    <span class="word">Ética</span>
+    <span class="word">Metafísica</span>
+    <span class="word">Estética</span>
+    <span class="word">Lógica</span>
+    <span class="word">Epistemología</span>
+    <span class="word">Existencialismo</span>
+    <span class="word">Racionalismo</span>
+    <span class="word">Empirismo</span>
+    <span class="word">Moralidad</span>
+    <span class="word">Idealismo</span>
+  </div>
+
+  <!-- Sección de tarjetas con efecto 3D -->
+  <div class="skills-card-section">
+    <div class="skills-card-grid">
+      <div class="skills-card" *ngFor="let skill of skillsList">
+        <div class="skills-card-inner">
+          <div class="skills-card-front">
+            <h3>{{ skill.name }}</h3>
+          </div>
+          <div class="skills-card-back">
+            <p>{{ skill.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Botones animados -->
+  <div class="animated-buttons">
+    <button class="animated-button">Contempla</button>
+    <button class="animated-button">Reflexiona</button>
+    <button class="animated-button">Explora</button>
+  </div>
+
+  <!-- Cards con efectos de hover -->
+  <div class="cards-section">
+    <div class="skill-card">
+      <h3>Sócrates</h3>
+      <p>Conócete a ti mismo.</p>
+    </div>
+    <div class="skill-card">
+      <h3>Platón</h3>
+      <p>El mundo de las ideas.</p>
+    </div>
+    <div class="skill-card">
+      <h3>Aristóteles</h3>
+      <p>La lógica y la razón.</p>
+    </div>
+  </div>
+
+  <!-- Formulario interactivo -->
+  <div class="form-section">
+    <h3>Suscríbete a Filosofía</h3>
+    <form>
+      <input type="text" placeholder="Tu nombre" class="input-field" />
+      <input type="email" placeholder="Tu correo" class="input-field" />
+      <button type="submit" class="submit-button">Enviar</button>
+    </form>
+  </div>
+
+  <!-- Árbol de Conceptos Filosóficos -->
+  <div class="tree-diagram-container">
+    <h2>Árbol de Conceptos Filosóficos</h2>
+    <div id="tree-diagram"></div>
+  </div>
+</div>
